@@ -122,7 +122,7 @@ def newtonRaphson(f, df, x0, x1, toleranciaError, maximoIteraciones):
     print ('No hubo convergencia')
     return x, delta, i+1
 
-def newtonRaphsonPiola(f, df, ddf, x0, x1, toleranciaError, maximoIteraciones):
+def newtonRaphsonModificado(f, df, ddf, x0, x1, toleranciaError, maximoIteraciones):
     """
     Devolver (x, delta), raiz y cota de error por metodo de la secante
     """
@@ -205,17 +205,17 @@ def imprimirDatos (nombreFuncion,funcion, dFuncion, ddFuncion, xMin, xMax, error
     print('')
     
     print('----------------')
-    print('Metodo Newton-Raphson-Piola')
+    print('Metodo Newton-Raphson para raíces multiples')
     print('----------------')
     print('')
     print('Funcion ' + nombreFuncion +', a_tol = '+str(error1))
-    r, delta, n_iter = newtonRaphsonPiola(funcion, dFuncion, ddFuncion, xMin, xMax, error1, maximasIteraciones)
+    r, delta, n_iter = newtonRaphsonModificado(funcion, dFuncion, ddFuncion, xMin, xMax, error1, maximasIteraciones)
     print('raiz = ' +str(r))
     print('delta= ' +str(delta))
     print('n_ite= ' +str(n_iter))
     print('')
     print('Funcion ' + nombreFuncion +', a_tol = '+str(error2))
-    r, delta, n_iter = newtonRaphsonPiola(funcion, dFuncion, ddFuncion, xMin, xMax, error2, maximasIteraciones)
+    r, delta, n_iter = newtonRaphsonModificado(funcion, dFuncion, ddFuncion, xMin, xMax, error2, maximasIteraciones)
     print('raiz = ' +str(r))
     print('delta= ' +str(delta))
     print('n_ite= ' +str(n_iter))
@@ -256,7 +256,9 @@ error1 = 1e-5
 error2 = 1e-13
 maximasIteraciones = 100
 
-imprimirDatos("f1", f1, df1, ddf1, xMin, xMax, error1, error2, maximasIteraciones)
-imprimirDatos("f2", f2, df2, ddf2, xMin, xMax, error1, error2, maximasIteraciones)
+#imprimirDatos("f1", f1, df1, ddf1, xMin, xMax, error1, error2, maximasIteraciones)
+#imprimirDatos("f2", f2, df2, ddf2, xMin, xMax, error1, error2, maximasIteraciones)
 imprimirDatos("f3", f3, df3, ddf3, xMin, xMax, error1, error2, maximasIteraciones)
+
+
         
