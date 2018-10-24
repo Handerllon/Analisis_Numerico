@@ -256,8 +256,8 @@ error1 = 1e-5
 error2 = 1e-13
 maximasIteraciones = 100
 
-#imprimirDatos("f1", f1, df1, ddf1, xMin, xMax, error1, error2, maximasIteraciones)
-#imprimirDatos("f2", f2, df2, ddf2, xMin, xMax, error1, error2, maximasIteraciones)
+imprimirDatos("f1", f1, df1, ddf1, xMin, xMax, error1, error2, maximasIteraciones)
+imprimirDatos("f2", f2, df2, ddf2, xMin, xMax, error1, error2, maximasIteraciones)
 imprimirDatos("f3", f3, df3, ddf3, xMin, xMax, error1, error2, maximasIteraciones)
 
 
